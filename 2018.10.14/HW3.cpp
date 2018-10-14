@@ -1,13 +1,15 @@
 #include <iostream>
 using namespace std;
 int main() {
-int n,i=0;
-float sum;
-while(n!=0){
-cin»n;
-sum+=n;
-i++;
+double b=0; n=0, a;
+do
+{cin>>a;
+b+=a;
+n+=1;
 }
-cout«"Среднее арифметическое = "«(sum/i)«endl;
+while (a!=0);
+double s;
+s=b/n;
+cout<<s;
 return 0;
 }
