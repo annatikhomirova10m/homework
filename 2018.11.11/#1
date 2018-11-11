@@ -1,0 +1,21 @@
+// Проверка на простое число
+
+#include "pch.h"
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+bool isSimple(int a) {
+	bool Result = true;
+	if (a < 0) { a = -a; }
+	if (a = 0) { return true; }
+	if (a = 1) { return false; }
+	for (int i = 2; i < a; i++) {
+		if (a%i == 0) {
+			Result = false;
+			break;
+		}
+	}
+	return Result;
+}
