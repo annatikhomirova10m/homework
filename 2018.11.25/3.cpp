@@ -49,7 +49,7 @@ if (naiden == true) { break; }
 } 
 if (naiden == false) { eler = eler + 1; } 
 } 
-cout « endl « "Функция Эйлера: " « eler « endl;
+cout << endl << "Функция Эйлера: " << eler << endl;
 delete[] ptrIsx;  
 delete[] ptrTek; 
 return 0; 
