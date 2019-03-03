@@ -1,24 +1,24 @@
 #include <iostream>
 using namespace std;
-struct knot
+struct Node
 {
 int el;
-struct knot* next;
+struct Node* next;
 };
 class List()
 {
 private:
-knot* data;
-knot* tail;
+Node* data;
+Node* tail;
 public:
 List();
 operator[](List* l,int i);
 };
 List::List()
 {
-knot *head==NULL;
-knot *t=(knot*)malloc(sizeof(knot))
-knot->el=0; 
+Node *head==NULL;
+Node *t=(Node*)malloc(sizeof(Node))
+Node->el=0; 
 t->next=(*head); 
 (*head)=t;
 }
@@ -36,16 +36,16 @@ k++
 }
 return head;
 }
-void push_i(knot *head,int i,int data)
+void push_i(Node *head,int i,int data)
 {
 int k=0;
-knot *t=NULL;
+Node *t=NULL;
 while(k<i&&head->next)
 {
 head=head->next;
 k++
 }
-t=(knot*)malloc(sizeof(knot));
+t=(Node*)malloc(sizeof(Node));
 t->el=data;
 if(head->next)
 {
@@ -55,16 +55,16 @@ else
 t->next=NULL;
 head->next=t;
 }
-void pop_i(knot **head,int data)
+void pop_i(Node **head,int data)
 {
 int k=0;
-knot *t=NULL;
+Node *t=NULL;
 while(k<i-1&&head->next)
 {
 head=head->next;
 k++
 }
-t=(knot*)malloc(sizeof(knot)-1);
+t=(Node*)malloc(sizeof(Node)-1);
 if(head->next)
 {
 t->next=head->next;
